@@ -1,0 +1,45 @@
+Introduction¶
+Background
+Asian food is growing stronger in France lately. Asian restaurants are very often crowded especially in Paris area.
+
+In Paris center and ‘little crown’, Vietnamese baguettes and Bubble tea are opening everywhere, and are always full whatever is the hour.
+
+This project aims to estimate the best localization to open such a business in Versailles city, just nearby Paris.
+
+Prior launching any restaurant, it’s important to know if the business as a good opportunity. In order to do so, this report will try to gather data about other restaurant localization, competitors and best localization.
+
+These data could be use for a business plan afterward
+
+Problem
+As the goal of this is to create a business plan in the end, we need to make sure data from api are correct. We also need to check that customer could be interested in this specific business.
+
+In order to do so, a survey in Paris and Versailles will be done in addition to data gathering. I’ll go in the cities and check at different hours if restaurants are working, if streets are full and so on, and what king of restaurant works well. This survey will allow to validate the data analysis done here.
+
+Interest
+This study can be used by anyone interested by opening a restaurant. Or any other business.
+
+Maybe they will need to modify some data.
+
+Personal interest:
+
+Actually, I plan to open this business, so this study is done very seriously, the survey also. This study is going to be a part of a business plan to give to bank in order to optain a mortgage to start a business.
+
+Data
+This notebook is highly inspired by the template given in the course. I will keep the idea of clustering the city by area and then plot heatmap to find better area.
+
+I will change some data:
+
+Country/City: France
+Goal: Open a restaurant/little shop for workers in weekday and maybe Saturday.
+So, I will cross data from working days, and localization.
+
+I will use the following API:
+
+Foursquare API: to find restaurant/venues
+Google API: reverse geolocalisation
+Neighborhood Candidates
+Let's create latitude & longitude coordinates for centroids of our candidate neighborhoods. We will create a grid of cells covering our area of interest which is aprox. 1.5km killometers centered around Versailles city center.
+
+Let's first find the latitude & longitude of Versailles city center, using specific, well known address and Google Maps geocoding API.
+
+We'll consider the Prefecture to be the city center, as a lot of companies are around.
